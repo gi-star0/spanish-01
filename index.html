@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESPAÑA · 西班牙現代旅遊指南 | 陽光、藝術與慢活之境</title>
+  <meta name="description" content="簡約現代的西班牙深度旅行指南：涵蓋巴塞隆納、馬德里、塞維亞、格拉納達等城市推薦、在地美食、四季氣候與精選路線規劃。">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <span class="brand-sub">GUÍA DE VIAJE</span>
+        <span class="brand-main">ESPAÑA<span>·</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#destinations">經典城市</a>
+        <a href="#experiences">在地體驗</a>
+        <a href="#itineraries">精選行程</a>
+        <a href="#seasons">最佳季節</a>
+        <a href="#tips">行前必讀</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#itineraries" class="btn-primary-sm">探索行程</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="切換選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#destinations" class="m-link">經典城市</a>
+      <a href="#experiences" class="m-link">在地體驗</a>
+      <a href="#itineraries" class="m-link">精選行程</a>
+      <a href="#seasons" class="m-link">最佳季節</a>
+      <a href="#tips" class="m-link">行前必讀</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=2000&q=85" alt="Spain Architecture" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="dot"></span> 2026 CURATED TRAVEL GUIDE
+      </div>
+      <h1 class="hero-title">
+        陽光、藝術與熱情的<br>
+        <span class="highlight-text">伊比利現代漫遊</span>
+      </h1>
+      <p class="hero-desc">
+        從高第建築的流暢奇想，到安達魯西亞的佛朗明哥節拍；在橘花香氣與午後西斯塔的慢活步調中，重新定義旅行的純粹與自由。
+      </p>
+      <div class="hero-actions">
+        <a href="#destinations" class="btn-primary">開始探索城市</a>
+        <a href="#itineraries" class="btn-outline">查看 7~10 天推薦路線</a>
+      </div>
+
+      <!-- Quick Highlights Bar -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">300+</span>
+          <span class="stat-label">年均晴朗天數</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">49</span>
+          <span class="stat-label">UNESCO 世界文化遺產</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">8,000 km</span>
+          <span class="stat-label">蔚藍迷人海岸線</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">No. 1</span>
+          <span class="stat-label">全球健康與生活品質</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Destinations Section -->
+  <section class="section destinations" id="destinations">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">DESTINATIONS</div>
+        <h2 class="section-title">經典名城 · 六大風貌</h2>
+        <p class="section-desc">每一座西班牙城市，都是一場獨立而濃烈的感官交響樂。點擊卡片瀏覽私房景點與建議天數。</p>
+        
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">全部城市</button>
+          <button class="filter-btn" data-filter="culture">建築與歷史</button>
+          <button class="filter-btn" data-filter="food">極致美饌</button>
+          <button class="filter-btn" data-filter="coast">蔚藍海島</button>
+        </div>
+      </div>
+
+      <div class="destinations-grid" id="destinationsGrid">
+        <!-- City 1: Barcelona -->
+        <div class="city-card" data-category="culture" onclick="openCityModal('barcelona')">
+          <div class="city-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=1000&q=80" alt="巴塞隆納 Barcelona" class="city-img" loading="lazy">
+            <span class="city-badge">加泰隆尼亞</span>
+          </div>
+          <div class="city-content">
+            <div class="city-meta">
+              <span class="city-region">建築藝術之都</span>
+              <span class="city-days">建議 4-5 天</span>
+            </div>
+            <h3 class="city-name">巴塞隆納 <span>Barcelona</span></h3>
+            <p class="city-summary">高第的聖家堂與奎爾公園讓整座城市宛如夢境，地中海的海風在沙灘與哥德舊城區間穿梭。</p>
+            <div class="city-footer">
+              <span class="city-tag">聖家堂</span>
+              <span class="city-tag">米拉之家</span>
+              <span class="city-tag">蘭布拉大道</span>
+              <span class="city-arrow">探索詳情 →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- City 2: Madrid -->
+        <div class="city-card" data-category="culture" onclick="openCityModal('madrid')">
+          <div class="city-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1000&q=80" alt="馬德里 Madrid" class="city-img" loading="lazy">
+            <span class="city-badge">中央首善</span>
+          </div>
+          <div class="city-content">
+            <div class="city-meta">
+              <span class="city-region">皇室與藝術金三角</span>
+              <span class="city-days">建議 3-4 天</span>
+            </div>
+            <h3 class="city-name">馬德里 <span>Madrid</span></h3>
+            <p class="city-summary">普拉多美術館藏有歐洲大師真跡，麗池公園的金色陽光與午後熱鬧的聖米格爾市場令人沉醉。</p>
+            <div class="city-footer">
+              <span class="city-tag">普拉多美術館</span>
+              <span class="city-tag">馬德里王宮</span>
+              <span class="city-tag">麗池公園</span>
+              <span class="city-arrow">探索詳情 →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- City 3: Seville -->
+        <div class="city-card" data-category="culture" onclick="openCityModal('seville')">
+          <div class="city-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=1000&q=80" alt="塞維亞 Seville" class="city-img" loading="lazy">
+            <span class="city-badge">安達魯西亞</span>
+          </div>
+          <div class="city-content">
+            <div class="city-meta">
+              <span class="city-region">熱情南境之靈魂</span>
+              <span class="city-days">建議 3 天</span>
+            </div>
+            <h3 class="city-name">塞維亞 <span>Sevilla</span></h3>
+            <p class="city-summary">西班牙廣場的半月形迴廊、摩爾式阿卡薩王宮的花園，以及巷弄間深夜迴盪的佛朗明哥吉他。</p>
+            <div class="city-footer">
+              <span class="city-tag">西班牙廣場</span>
+              <span class="city-tag">塞維亞王宮</span>
+              <span class="city-tag">聖十字區</span>
+              <span class="city-arrow">探索詳情 →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- City 4: Granada -->
+        <div class="city-card" data-category="culture" onclick="openCityModal('granada')">
+          <div class="city-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?auto=format&fit=crop&w=1000&q=80" alt="格拉納達 Granada" class="city-img" loading="lazy">
+            <span class="city-badge">摩爾遺珍</span>
+          </div>
+          <div class="city-content">
+            <div class="city-meta">
+              <span class="city-region">伊斯蘭王朝絕響</span>
+              <span class="city-days">建議 2-3 天</span>
+            </div>
+            <h3 class="city-name">格拉納達 <span>Granada</span></h3>
+            <p class="city-summary">紅堡阿爾罕布拉宮矗立在內華達雪山前，點一杯酒即贈道地 Tapas 的溫暖好客讓人永生難忘。</p>
+            <div class="city-footer">
+              <span class="city-tag">阿爾罕布拉宮</span>
+              <span class="city-tag">阿爾拜辛區</span>
+              <span class="city-tag">免費Tapas文化</span>
+              <span class="city-arrow">探索詳情 →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- City 5: San Sebastian -->
+        <div class="city-card" data-category="food" onclick="openCityModal('san-sebastian')">
+          <div class="city-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1509840841025-9088ba78a826?auto=format&fit=crop&w=1000&q=80" alt="聖塞巴斯提安 San Sebastián" class="city-img" loading="lazy">
+            <span class="city-badge">巴斯克地區</span>
+          </div>
+          <div class="city-content">
+            <div class="city-meta">
+              <span class="city-region">世界頂級美食之都</span>
+              <span class="city-days">建議 2-3 天</span>
+            </div>
+            <h3 class="city-name">聖塞巴斯提安 <span>San Sebastián</span></h3>
+            <p class="city-summary">被譽為全球每平方公里擁有最多米其林星級的城市，貝殼灣弧線與舊城區的 Pintxos 酒吧巡禮是一生必嚐。</p>
+            <div class="city-footer">
+              <span class="city-tag">Pintxos 小吃</span>
+              <span class="city-tag">貝殼海灣</span>
+              <span class="city-tag">米其林饗宴</span>
+              <span class="city-arrow">探索詳情 →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- City 6: Mallorca -->
+        <div class="city-card" data-category="coast" onclick="openCityModal('mallorca')">
+          <div class="city-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80" alt="馬略卡島 Mallorca" class="city-img" loading="lazy">
+            <span class="city-badge">巴利阿里群島</span>
+          </div>
+          <div class="city-content">
+            <div class="city-meta">
+              <span class="city-region">地中海蔚藍秘境</span>
+              <span class="city-days">建議 3-5 天</span>
+            </div>
+            <h3 class="city-name">馬略卡島 <span>Mallorca</span></h3>
+            <p class="city-summary">果凍般的透徹藍海、懸崖邊的白色石灰岩古鎮，以及蕭邦曾駐足沉思的瓦爾德莫薩修道院。</p>
+            <div class="city-footer">
+              <span class="city-tag">卡拉海灣</span>
+              <span class="city-tag">帕爾馬主教堂</span>
+              <span class="city-tag">海島自駕</span>
+              <span class="city-arrow">探索詳情 →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle & Experiences Section -->
+  <section class="section experiences" id="experiences">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">LIFESTYLE & TASTE</div>
+        <h2 class="section-title">西國靈魂 · 四重感官沉浸</h2>
+        <p class="section-desc">跳脫走馬看花的觀光模式，深入體會伊比利半島獨特的生活哲學與飲食美學。</p>
+      </div>
+
+      <div class="exp-grid">
+        <div class="exp-card">
+          <div class="exp-icon">🍷</div>
+          <h3 class="exp-title">Tapas & Pintxos 巡遊</h3>
+          <p class="exp-desc">在西班牙，「吃」是一場社交盛宴。黃昏時刻穿梭於酒館間，點一杯 Caña（生啤）或 Rioja 紅酒，搭配伊比利火腿與番茄麵包，站著聊出在地生活味。</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">💃</div>
+          <h3 class="exp-title">純粹佛朗明哥的震撼</h3>
+          <p class="exp-desc">佛朗明哥不只是舞蹈，而是一種名為「Duende」（靈魂共鳴）的情感釋放。避開觀光大秀，走進安達魯西亞隱蔽的 Tablao，感受腳步蹬擊地面的狂烈震顫。</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">☀️</div>
+          <h3 class="exp-title">Siesta 西斯塔的慢節奏</h3>
+          <p class="exp-desc">下午兩點到五點的悠閒沉澱，讓身心慢下來享受陽光與咖啡。西班牙人習慣晚上九點後才共進晚餐，在繁星滿溢的露天廣場渡過漫漫長夜。</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">🏛️</div>
+          <h3 class="exp-title">千年建築的文明對話</h3>
+          <p class="exp-desc">羅馬水道橋的高聳工藝、摩爾人精雕細琢的幾何灰泥、哥德大教堂的玫瑰花窗，再到高第破格的新藝術，一部建築史就在步履間展開。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Itineraries Section -->
+  <section class="section itineraries" id="itineraries">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">SUGGESTED ROUTES</div>
+        <h2 class="section-title">深度精選行程規劃</h2>
+        <p class="section-desc">結合高鐵 AVE 網絡與流暢動線，量身打造最舒適的每日漫遊步調。</p>
+
+        <!-- Itinerary switcher -->
+        <div class="itinerary-nav">
+          <button class="itin-tab active" onclick="switchItinerary('classic')">經典雙城 7 日 (馬德里 + 巴塞隆納)</button>
+          <button class="itin-tab" onclick="switchItinerary('south')">熱情安達魯西亞 8 日 (塞維亞 · 格拉納達)</button>
+          <button class="itin-tab" onclick="switchItinerary('north')">巴斯克美饌藝術 5 日 (畢爾包 · 聖塞巴斯提安)</button>
+        </div>
+      </div>
+
+      <!-- Itinerary Content Box -->
+      <div class="itinerary-display" id="itineraryDisplay">
+        <!-- Rendered by JavaScript dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasons & Climate Guide -->
+  <section class="section seasons" id="seasons">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">WHEN TO VISIT</div>
+        <h2 class="section-title">四季漫遊指南與節慶</h2>
+        <p class="section-desc">西班牙幅員遼闊，不同季節皆有其迷人之處，挑選最適合你步調的時間啟程。</p>
+      </div>
+
+      <div class="seasons-grid">
+        <div class="season-card">
+          <div class="season-header">
+            <span class="season-name">春季 · Primavera</span>
+            <span class="season-months">3 月 - 5 月</span>
+          </div>
+          <div class="season-rating">★★★★★ 最推薦</div>
+          <p class="season-text">氣候溫和舒適，安達魯西亞橘花盛放。此時有塞維亞聖週（Semana Santa）與盛大的四月節（Feria de Abril）。</p>
+          <div class="season-suit">適合：古城漫步、文化節慶巡禮</div>
+        </div>
+
+        <div class="season-card">
+          <div class="season-header">
+            <span class="season-name">夏季 · Verano</span>
+            <span class="season-months">6 月 - 8 月</span>
+          </div>
+          <div class="season-rating">★★★★☆ 海島熱季</div>
+          <p class="season-text">南部陽光強烈，適合前往北部綠色西班牙（巴斯克）避暑，或投奔馬略卡、伊比薩島的清涼地中海浪潮。</p>
+          <div class="season-suit">適合：海灘水上活動、戶外音樂祭</div>
+        </div>
+
+        <div class="season-card">
+          <div class="season-header">
+            <span class="season-name">秋季 · Otoño</span>
+            <span class="season-months">9 月 - 11 月</span>
+          </div>
+          <div class="season-rating">★★★★★ 宜人舒適</div>
+          <p class="season-text">酷暑退去，葡萄園迎來採收季。里奧哈與多羅河岸葡萄酒產區風景如畫，各大美術館亦不受人潮擠壓。</p>
+          <div class="season-suit">適合：葡萄酒品飲、攝影、藝術展覽</div>
+        </div>
+
+        <div class="season-card">
+          <div class="season-header">
+            <span class="season-name">冬季 · Invierno</span>
+            <span class="season-months">12 月 - 2 月</span>
+          </div>
+          <div class="season-rating">★★★★☆ 暖冬避寒</div>
+          <p class="season-text">南部安達魯西亞仍有 16-18°C 溫暖陽光，內華達山脈可滑雪，且機票與飯店價格最具親和力。</p>
+          <div class="season-suit">適合：預算友善慢活、南部避冬</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical Travel Tips -->
+  <section class="section tips" id="tips">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">TRAVEL ESSENTIALS</div>
+        <h2 class="section-title">行前必讀 · 實用旅行錦囊</h2>
+        <p class="section-desc">掌握當地節奏與在地規則，讓你的旅程更順暢優雅。</p>
+      </div>
+
+      <div class="tips-accordion">
+        <details class="tip-item" open>
+          <summary class="tip-summary">
+            <span class="tip-icon">⏰</span>
+            <span class="tip-q">作息與用餐時間：西班牙的特殊節奏</span>
+            <span class="tip-arrow"></span>
+          </summary>
+          <div class="tip-answer">
+            西班牙人午餐時間通常為 14:00 - 16:00，晚餐則在 20:30 - 22:30 之後才開始。許多餐廳在 16:00 - 20:00 間休息，若感到飢餓，可隨時前往 Tapas 酒吧點小食充飢。
+          </div>
+        </details>
+
+        <details class="tip-item">
+          <summary class="tip-summary">
+            <span class="tip-icon">🚆</span>
+            <span class="tip-q">城市間交通：搭乘 AVE 高速鐵路</span>
+            <span class="tip-arrow"></span>
+          </summary>
+          <div class="tip-answer">
+            馬德里到巴塞隆納搭乘 AVE 僅需 2.5 小時，連接塞維亞約 2.5 小時。強烈建議提早 1~2 個月在 Renfe、Iryo 或 Ouigo 官網預訂車票，早鳥優惠可節省高達 50% 以上票價。
+          </div>
+        </details>
+
+        <details class="tip-item">
+          <summary class="tip-summary">
+            <span class="tip-icon">🎟️</span>
+            <span class="tip-q">熱門景點門票：務必提前線上預訂</span>
+            <span class="tip-arrow"></span>
+          </summary>
+          <div class="tip-answer">
+            巴塞隆納的「聖家堂」與格拉納達的「阿爾罕布拉宮（納斯里德宮）」現場幾乎買不到當日票，阿爾罕布拉宮建議提早 1~2 個月在官方網站預定指定入場時段。
+          </div>
+        </details>
+
+        <details class="tip-item">
+          <summary class="tip-summary">
+            <span class="tip-icon">🛡️</span>
+            <span class="tip-q">防竊與安全意識：享受旅程同時保持機警</span>
+            <span class="tip-arrow"></span>
+          </summary>
+          <div class="tip-answer">
+            西班牙整體治安良好，但在熱門觀光地（如巴塞隆納地鐵、蘭布拉大道、馬德里太陽門廣場）扒手較多。隨身包包前背、手機不要隨意擺在戶外餐廳桌角，搭乘地鐵時留意身邊靠得過近的陌生人。
+          </div>
+        </details>
+
+        <details class="tip-item">
+          <summary class="tip-summary">
+            <span class="tip-icon">💶</span>
+            <span class="tip-q">貨幣與小費習慣</span>
+            <span class="tip-arrow"></span>
+          </summary>
+          <div class="tip-answer">
+            通用貨幣為歐元（EUR）。西班牙信用卡與 Apple Pay 普及率極高，路邊小酒館亦能感應刷卡。西班牙沒有硬性小費文化，若服務滿意，留下帳單零錢或 5%~10% 作為心意即可。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Modal / Slide-over Detail -->
+  <div class="modal-backdrop" id="cityModalBackdrop" onclick="closeCityModal()">
+    <div class="modal-dialog" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeCityModal()" aria-label="關閉視窗">&times;</button>
+      <div id="modalDynamicContent">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-main">ESPAÑA<span>·</span></div>
+        <p class="footer-slogan">致敬伊比利半島的陽光與慢活藝術。為獨立自由的現代旅人打造。</p>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="f-col">
+          <div class="f-title">熱門目的地</div>
+          <a href="#destinations" onclick="openCityModal('barcelona')">巴塞隆納</a>
+          <a href="#destinations" onclick="openCityModal('madrid')">馬德里</a>
+          <a href="#destinations" onclick="openCityModal('seville')">塞維亞</a>
+          <a href="#destinations" onclick="openCityModal('granada')">格拉納達</a>
+        </div>
+        <div class="f-col">
+          <div class="f-title">旅行主題</div>
+          <a href="#experiences">美食酒館巡禮</a>
+          <a href="#experiences">世界遺產建築</a>
+          <a href="#itineraries">高鐵路線規劃</a>
+          <a href="#seasons">最佳出發月份</a>
+        </div>
+        <div class="f-col">
+          <div class="f-title">官方與專案</div>
+          <a href="https://github.com/gi-star0/spanish-01" target="_blank" rel="noopener">GitHub 原始碼</a>
+          <a href="https://www.spain.info" target="_blank" rel="noopener">西班牙國家旅遊局</a>
+          <span class="repo-tag">Repository: spanish-01</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container fb-flex">
+        <span>&copy; 2026 ESPAÑA TRAVEL GUIDE. Designed with Minimalist Modern Aesthetics.</span>
+        <span>Hosted openly on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
